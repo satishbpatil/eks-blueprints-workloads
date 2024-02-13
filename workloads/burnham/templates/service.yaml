@@ -3,7 +3,8 @@ kind: Service
 metadata:	
   name: nginx
   labels:
-    {{- toYaml .Values.labels | nindent 4 }}
+    somelabel: "somevalue"
+    # {{- toYaml .Values.labels | nindent 4 }}
 spec:	
   ports:	
   - port: 80	
