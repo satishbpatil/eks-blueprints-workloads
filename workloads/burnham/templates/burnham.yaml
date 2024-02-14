@@ -55,7 +55,9 @@ metadata:
   name: burnham
   namespace: burnham
   labels:
-    app: burnham-ingress-{{ .Values.spec.env }}  
+    #app: burnham-ingress-{{ .Values.spec.env }}  
+    app: burnham-ingress-prod  
+
 spec:
   ports:
   - port: 80
