@@ -2,9 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: riker-ingress
+  namespace: riker
   # namespace is specified as namespace destination in env/{dev,test,prod}/team-riker.yaml
   labels:
-    namespace: riker
+    
     app: guestbook-ui
     {{- toYaml .Values.labels | nindent 4 }}
   annotations:
